@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad@x | UI/UX & Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: #fbbf24;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #fbbf24;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-gray-200">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-white">
+                Ad<span class="text-amber-400">@</span>x
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="nav-link hover:text-amber-400 transition">Home</a>
+                <a href="#about" class="nav-link hover:text-amber-400 transition">About</a>
+                <a href="#projects" class="nav-link hover:text-amber-400 transition">Projects</a>
+                <a href="#contact" class="px-4 py-2 bg-amber-500 text-slate-900 rounded-full hover:bg-amber-400 transition">Hire Me</a>
+            </div>
+            <button class="md:hidden text-2xl text-amber-400">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-amber-400 font-medium mb-4 tracking-widest uppercase text-sm">Creative Developer & Designer</h2>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Building Digital <span class="gradient-text">Excellence.</span>
+                </h1>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg leading-relaxed">
+                    I am Ad@x, a specialist in crafting high-performance web applications and intuitive user experiences for the modern African market.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-8 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-amber-400 transition flex items-center">
+                        View Work <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                    <div class="flex items-center space-x-4 ml-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl transition"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative hidden md:block">
+                <div class="w-80 h-80 bg-amber-500/20 absolute rounded-full blur-3xl -top-10 -left-10 animate-pulse"></div>
+                <div class="w-full aspect-square bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden relative z-10">
+                    <span class="text-[12rem] font-black text-white/5 select-none">A</span>
+                    <i class="fa-solid fa-code text-amber-400 text-8xl absolute"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <h2 class="text-3xl font-bold text-white mb-4">My Core Expertise</h2>
+                    <p class="text-gray-400 mb-6">Bridging the gap between complex backend logic and seamless user interfaces.</p>
+                    <div class="h-1 w-20 bg-amber-500"></div>
+                </div>
+                <div class="md:col-span-2 grid sm:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-xl">
+                        <i class="fa-solid fa-pen-nib text-amber-400 text-2xl mb-4"></i>
+                       <a href="./Food.html"><h3 class="text-xl font-bold text-white mb-2">UI/UX Design</h3></a> 
+                        <p class="text-sm text-gray-400">Wireframing, prototyping, and high-fidelity designs using Figma and Adobe XD.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <i class="fa-solid fa-laptop-code text-amber-400 text-2xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Web Development</h3>
+                        <p class="text-sm text-gray-400">Responsive applications built with React, Tailwind, and Node.js.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <i class="fa-solid fa-building-columns text-amber-400 text-2xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Fintech Systems</h3>
+                        <p class="text-sm text-gray-400">Integration with OPay, Moniepoint, and local payment gateways.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <i class="fa-solid fa-mobile-screen text-amber-400 text-2xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Mobile-First</h3>
+                        <p class="text-sm text-gray-400">Optimizing digital products for high performance on mobile devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+                <p class="text-gray-400">A collection of solutions built for real-world impact.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-white/5">
+                    <div class="h-48 bg-gradient-to-br from-blue-600/40 to-slate-900 flex items-center justify-center">
+                        <i class="fa-solid fa-hospital-user text-5xl text-blue-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Healthcare</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Heal Sync</h3>
+                        <p class="text-gray-400 text-sm mt-3">Comprehensive HIS ecosystem for patient management and encryption.</p>
+                        <div class="flex mt-4 space-x-2">
+                            <span class="px-2 py-1 bg-white/5 rounded text-[10px]">React</span>
+                            <span class="px-2 py-1 bg-white/5 rounded text-[10px]">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-white/5">
+                    <div class="h-48 bg-gradient-to-br from-amber-600/40 to-slate-900 flex items-center justify-center">
+                        <i class="fa-solid fa-ticket text-5xl text-amber-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Entertainment</span>
+                        <h3 class="text-xl font-bold text-white mt-2">TripTicket (Naija)</h3>
+                        <p class="text-gray-400 text-sm mt-3">Premium event ticketing platform with bank transfer integration.</p>
+                        <div class="flex mt-4 space-x-2">
+                            <span class="px-2 py-1 bg-white/5 rounded text-[10px]">UI/UX</span>
+                            <span class="px-2 py-1 bg-white/5 rounded text-[10px]">Paystack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-white/5">
+                    <div class="h-48 bg-gradient-to-br from-purple-600/40 to-slate-900 flex items-center justify-center">
+                        <i class="fa-solid fa-brain text-5xl text-purple-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">AI / Content</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Godlike AI</h3>
+                        <p class="text-gray-400 text-sm mt-3">Multimodal tool for intelligent video content analysis and extraction.</p>
+                        <div class="flex mt-4 space-x-2">
+                            <span class="px-2 py-1 bg-white/5 rounded text-[10px]">Python</span>
+                            <span class="px-2 py-1 bg-white/5 rounded text-[10px]">Gemini API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to collaborate?</h2>
+            <p class="text-gray-400 mb-10 text-lg">I am currently available for freelance work and full-time opportunities.</p>
+            
+            <div class="bg-[#0f172a] p-8 rounded-3xl border border-white/10 text-left">
+                <form id="contactForm" class="space-y-6" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Full Name</label>
+                            <input type="text" class="w-full bg-slate-800 border border-white/10 rounded-lg px-4 py-3 focus:border-amber-400 focus:outline-none transition text-white" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Email Address</label>
+                            <input type="email" class="w-full bg-slate-800 border border-white/10 rounded-lg px-4 py-3 focus:border-amber-400 focus:outline-none transition text-white" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Project Message</label>
+                        <textarea rows="4" class="w-full bg-slate-800 border border-white/10 rounded-lg px-4 py-3 focus:border-amber-400 focus:outline-none transition text-white" placeholder="Tell me about your idea..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-amber-500 text-slate-900 font-bold rounded-lg hover:bg-amber-400 transition uppercase tracking-widest">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center">
+        <div class="text-2xl font-bold text-white mb-4">Ad<span class="text-amber-400">@</span>x</div>
+        <p class="text-gray-500 text-sm">© 2024 Ad@x. Built for the Digital Frontier.</p>
+    </footer>
+
+</body>
+</html>
